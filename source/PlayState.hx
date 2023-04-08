@@ -5500,15 +5500,15 @@ class PlayState extends MusicBeatState
 
 		var daRating = Ratings.judgeNote(noteDiff);
 
-		if (daRating != 'sick' && SaveData.missModeType == 2)
-			health -= 100;
+		// if (daRating != 'sick' && SaveData.missModeType == 2)
+			// health -= 100;
 
 		switch (daNote.noteType)
 		{
 			case 2:
 				if (!mirrormode)
 				{
-					health -= 100;
+					// health -= 100;
 
 					if (curSong.toLowerCase() == 'epiphany' && !practiceMode)
 						GameOverSubstate.crashdeath = Random.randBool(0.05);
@@ -5978,25 +5978,26 @@ class PlayState extends MusicBeatState
 			}
 		});
 
-		if (daNote.noteType == 2)
-		{
-			if (mirrormode)
-			{
-				if (SaveData.missModeType >= 1)
-				health -= 100;
-				else
-				health -= 0.5;
-			}
+		// if (daNote.noteType == 2)
+		// {
+		// 	if (mirrormode)
+		// 	{
+		// 		if (SaveData.missModeType >= 1)
+		// 		health -= 100;
+		// 		else
+		// 		health -= 0.5;
+		// 	}
 				
 			
-		}
-		else
-		{
-			if (SaveData.missModeType >= 1)
-				health -= 100;
-			else
+		// }
+		// else
+		// if(daNote.noteType != 2)
+		// {
+			// if (SaveData.missModeType >= 1)
+				// health -= 100;
+			// else
 				health -= 0.04;
-		}
+		// }
 
 		if (combo > 5 && gf.animOffsets.exists('sad') && !gf.animation.curAnim.name.startsWith('necksnap'))
 			gf.playAnim('sad');
@@ -6075,9 +6076,9 @@ class PlayState extends MusicBeatState
 			if (SaveData.ghostTapping)
 				return;
 
-			if (SaveData.missModeType >= 1)
-				health -= 100;
-			else
+			// if (SaveData.missModeType >= 1)
+				// health -= 100;
+			// else
 				health -= 0.04;
 
 			if (combo > 5 && gf.animOffsets.exists('sad') && !gf.animation.curAnim.name.startsWith('necksnap'))

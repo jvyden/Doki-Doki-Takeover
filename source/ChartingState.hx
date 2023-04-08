@@ -1657,7 +1657,8 @@ class ChartingState extends MusicBeatState
 		if (FlxG.keys.pressed.ONE)
 			noteType = 1; // Alt Note
 		else if (FlxG.keys.pressed.TWO)
-			noteType = 2; // Note of Markov
+			noteType = 1; // Note of Markov
+			// return;
 		else if (FlxG.keys.pressed.THREE)
 			noteType = 3; // Player 3 anims
 		else if (FlxG.keys.pressed.FOUR)
